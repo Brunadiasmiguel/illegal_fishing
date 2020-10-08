@@ -92,7 +92,7 @@ The workflow is describe in Trello: https://trello.com/b/UlEIgpNJ/illegalfishing
 
 Repository: https://github.com/Brunadiasmiguel/illegal_fishing
 Google slides presentation: https://docs.google.com/presentation/d/1TC5UYdqZXm_IEAc2d5dfq6P2hPx8DJGFIRMdcg-sAbE/edit?usp=sharing
-Tableau: https://public.tableau.com/profile/bruna8094#!/vizhome/illegal_fishing/Story1
+Tableau: https://public.tableau.com/profile/bruna8094#!/vizhome/illegal_fishing/Illegal_fishing_story
 
 
 ### Research links
