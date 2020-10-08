@@ -1,4 +1,4 @@
-# illegal_fishing
+# Illegal Fishing
 
 ## Predicting and Understanding Illegal Fishing project
 
@@ -8,7 +8,7 @@ The aim of this project was to create a prediction model for illegal fishing usi
 
 ### Questions and Hypotheses
 
-The main question of the project was "Can we predict illegal fishing?" (based on transshipment data, which is one type of illegal fishing. Splitting the questions and hypptheses in three main fields:
+The main question of the project was "Can we predict illegal fishing?" - based on transshipment data, which is one type of illegal fishing. Splitting the questions and hypptheses in three main fields:
 
 1) Predicting illegal fishing:
 - Which algorithm can be used to predict illegal fishing?
@@ -31,7 +31,7 @@ The main question of the project was "Can we predict illegal fishing?" (based on
 
 ### Datasets
 
-The data used for the prohect can be found in the data folder. For this project, two main sources were used and an additional source to match ISO3 country to the country name:
+The data used for the project can be found in the data folder. For this project, two main sources were used and an additional source to match ISO3 country to the country name:
 
 1)  fisshing_vessels.csv, taken from https://globalfishingwatch.org/data-download/datasets/public-fishing-vessels-v1 with the active fishing vessels from 2012 to 2016
 
@@ -41,7 +41,7 @@ The data used for the prohect can be found in the data folder. For this project,
 
 4) Country_ISO.csv, taken from https://satvasolutions.com/download-list-of-countries-in-format-iso-3166-1-alpha-3-and-sql-and-csv-file/, with the Iso3 matching the country for the merge
 
-### Data oganisation and wrangling
+### Data organisation and wrangling
 
 The data wrangling can be found in the data_wrangling folder. 
 
@@ -53,7 +53,7 @@ The data wrangling can be found in the data_wrangling folder.
 
 The data analysis can be found in the data_analysis folder.
 
-1) analysis_prediction_model.ipynb - it contains the merge between transshipment Maritime Mobile Service Identity (MMSI) vessels and not. After the merge, a binary column representing illegal fishing activity or not was added (taking into consideration the transshipment activity). The MMSI is a unique classifier and once a MMSI was caught in illegal activity, it was considered as illegal by the model. Therefore, 1 represents illegal fishing, 0 represents no illegal activity (at least associated to transshipment). The relevant features were selected for the model and different algorithms were trained. Ultimately, the Ramdom Forest machine learning algorithm gave the best prodiction base. After reaching a good result, the model was still improved adding bins - the finally accuracy reached around 80%. 
+1) analysis_prediction_model.ipynb - it contains the merge between transshipment Maritime Mobile Service Identity (MMSI) vessels and not. After the merge, a binary column representing illegal fishing activity or not was added (taking into consideration the transshipment activity). The MMSI is a unique classifier and once a MMSI was caught in illegal activity, it was considered as illegal by the model. Therefore, 1 represents illegal fishing, 0 represents no illegal activity (at least associated to transshipment). The relevant features were selected for the model and different algorithms were trained. Ultimately, the Ramdom Forest machine learning algorithm gave the best prediction base. After reaching a good result, the model was still improved adding bins - the finally accuracy reached around 80%. 
 
 2) analysis_regression_illegal_focus.ipynb - it contains a deeper analysis focus on the illegal fishing itself. Different binning techniques, linear regressions etc were made to understand the connection between different features as boat characteristics, encounter location, time, season, country flag etc and the IUU ranking or number of transshipment encounters. Matplotlib was used several times to understand the data better and a case study about China came from the analysis.
 
@@ -63,9 +63,9 @@ The data analysis can be found in the data_analysis folder.
 
 The results were positive and relevant. Namely:
 
-1) Illegal vs legal prediction: 80% accurary with random forest algorithm by binning and/or creating binary variables for the country flag, length, tonnage and engine power, IUU index, gear type
+1) Illegal vs legal prediction: 80% accurary with random forest algorithm by binning and/or creating binary variables for the country flag, length, tonnage and engine power, IUU index, gear type.
 
-2) The illegal fishing analysis brought up countries that have been associated to illegal fishing in the media and the techniques they used the most. It was very interesting to have the data corroborating what the media have been showing about illegal fishing and countries misbehaving. It also added relevant information as the usual characteristics of the boats for each countries, as well types of fishing gear, hot location spots for transshipment activities, etc which is also associated to the overfishing they have been targeting.
+2) The illegal fishing analysis brought up countries that have been associated to illegal fishing in the media and the techniques they use the most. It was very interesting to have the data corroborating what the media have been showing about illegal fishing and countries misbehaving. It also added relevant information as the usual characteristics of the boats for each countries, as well types of fishing gear, hot location spots for transshipment activities, etc which is also associated to the overfishing they have been targeting.
 
 3) A blacklist model which gave Peru, Taiwan and Russia with similar activity to China - which makes sense looking at the plotting, data and news.
 
@@ -76,6 +76,12 @@ Although the results were quite acceptable and the amount of data as well, there
 ### Repository organisation
 
 1) README.md file explaining the project
+2) gitignore
+3) data folder with all csv files, described under dataset
+4) data_analysis folder with the models and statistical analysis, described under data analysis
+5) data_wrangling folder with the data cleaning needed, described under data organisation and wrangling
+6) tableau, with the link to the tableau 
+7) tableau_csv_files with the csv files exported from the data_analysis in order to use in tableau
 
 
 ### Workflow
